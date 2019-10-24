@@ -11,12 +11,12 @@ server.engine('hbs', hbs({
   defaultLayout: 'main'
 }))
 
-server.set('view engine', hbs)
+server.set('view engine', 'hbs')
 server.use(express.static('public'))
+server.use(express.urlencoded({ extended: false }))
 
 // configuration
 server.engine('handlebars.hbs', hbs({ extname: '.hbs' }))
-server.set('view engine', 'handlebars')
 
 // routes
 server.use('/', routes)
