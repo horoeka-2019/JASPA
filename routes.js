@@ -8,12 +8,16 @@ const fs = require('fs')
 // server.get '/'
 
 homeRouter.get('/', (req, res) => {
-  const template = 'views/'
+  const template = './pages/index'
   const viewData = data
   res.render(template, viewData)
 })
 
 // server.get '/list'
+
+
+
+
 
 
 

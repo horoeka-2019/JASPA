@@ -1,0 +1,14 @@
+{
+  "foodlist":
+  [ 
+    {
+    "name": "Adam",
+    "food": "pizza"
+    },
+    {
+    "name": "Andria",
+    "food": "Choccy"
+    }   
+  ]
+
+}
