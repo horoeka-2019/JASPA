@@ -1,11 +1,3 @@
-const express = require('express')
-const hbs = require('express-handlebars')
-const server = express()
-
-module.exports = server
-
-// middleware
-
 // routes
 
 // server.get '/'
