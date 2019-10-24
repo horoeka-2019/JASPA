@@ -1,0 +1,12 @@
+
+Kia ora! Welcome to EatDA!
+
+This is an app for sorting shared lunches for the 2019 Horoeka cohort of Enspiral Dev Academy.
+
+What to do:
+The form below is for the shared lunch on Wednesday 30th October.
+Put your name and what you're bringing to the shared lunch in the appropriate fields, then click submit. 
+Remember, don't bring more than 2 servings worth of your dish: the fridges are smol!!
+
+
+
