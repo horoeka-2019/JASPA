@@ -1,17 +1,21 @@
 const express = require('express')
 const homeRouter = express.Router()
 const fs = require('fs')
-const path = './foodData.json'
+const path = './foodData.JSON'
 
 // routes
 
 // server.get '/'
 
 homeRouter.get('/', (req, res) => {
-  // const template = './pages/index'
-  // const viewData = data
-  res.send('Hello')
-  // res.render(template, viewData)
+  const template = './pages/index'
+
+  fs.readFile(path, 'utf8', (err, data) => {
+    if (err) console.error(err.message)
+console.log(data)
+    const viewData = JSON.parse(data)
+    res.render(template, viewData.list)
+  })
 })
 
 // POST data coming back (read and write) - redirect over to /list

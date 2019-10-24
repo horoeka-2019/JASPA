@@ -1,8 +1,10 @@
-{
-  "list":[
+{"list":[
+
   {"name": "peter",
   "plate": "eggs"},
+
   {"name": "suzana",
   "plate": "cake"}
+
 ]
 }
