@@ -10,15 +10,18 @@ body {
 }
 
 .header {
+  grid-column: span 3;
 
 }
 
 .page-contents {
+  grid-column: 2 / 3;
 
 }
 
 .footer {
 
+  grid-column: span 3;
 }
 
 h1 {
