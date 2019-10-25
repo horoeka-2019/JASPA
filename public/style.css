@@ -52,3 +52,70 @@ h3 {
 .AT {
   color: #DC483A;
 }
+.title-eda {
+  font-family: 'Poppins', sans-serif;
+  color: black
+}
+
+.size {
+  font-size: 2rem;
+}
+
+ul,
+ol {
+  padding: 0px;
+  margin: 0px;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.navigation {
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  background-color: #dc483a;
+  margin-bottom: 20px;
+}
+
+.navigation a {
+  color: black;
+  float: left;
+  text-align: center;
+  padding: 25px 20px;
+  text-decoration: none;
+}
+
+.navigation a.active {
+  background-color: rgb(194, 186, 186);
+  padding-top: 25px;
+  padding-bottom: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+}
+
+.nav-center {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.nav-right a {
+  float: right;
+  font-size: 18px;
+}
