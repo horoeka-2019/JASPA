@@ -6,13 +6,11 @@ const path = './foodData.JSON'
 // routes
 
 // server.get '/'
-
 homeRouter.get('/', (req, res) => {
-  const template = './pages/index'
+  const template = './pages/home'
 
   fs.readFile(path, 'utf8', (err, data) => {
     if (err) console.error(err.message)
-console.log(data)
     const viewData = JSON.parse(data)
     res.render(template, viewData.list)
   })
@@ -24,11 +22,10 @@ homeRouter.post('/', (req, res) => {
 
   fs.readFile(path, 'utf8', (err, data) => {
     if (err) console.error(err.message)
-
     const parsedData = JSON.parse(data)
-    const newData = parsedData.foodlist.push(addData)
+    parsedData.list.push(addData) // need to push addData
 
-    fs.writeFile(path, (JSON.stringify(newData)), { flag: 'a' }, (err) => {
+    fs.writeFile(path, (JSON.stringify(parsedData, null, '\t')), (err) => {
       if (err) console.error(err.message)
       console.log('Your food has been added!')
       res.redirect('/list')
@@ -38,14 +35,15 @@ homeRouter.post('/', (req, res) => {
 
 // server.get '/list'
 homeRouter.get('/list', (req, res) => {
-  const template = './pages/list'
+  // const template = './pages/list'
 
-  fs.readFile(path, 'utf8', (err, data) => {
-    if (err) console.error(err.message)
+  // fs.readFile(path, 'utf8', (err, data) => {
+  //   if (err) console.error(err.message)
 
-    const contents = JSON.parse(data)
-    res.render(template, contents)
-  })
+  //   const contents = JSON.parse(data)
+  //   res.render(template, contents)
+  // })
+  res.send('hello')
 })
 
 module.exports = homeRouter
