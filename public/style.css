@@ -1,3 +1,57 @@
+body {
+  background-color: #2C98AE;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60px auto 40px;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.header {
+  grid-column: span 3;
+
+}
+
+.page-contents {
+  grid-column: 2 / 3;
+}
+
+.footer {
+  text-align: center;
+  grid-column: span 3;
+  grid-row: 3 / 4;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.contents {
+
+}
+
+.form {
+
+}
+
+.input {
+
+}
+
+.submit {
+
+}
+
+.AT {
+  color: #DC483A;
+}
 .title-eda {
   font-family: 'Poppins', sans-serif;
   color: black

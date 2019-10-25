@@ -1,10 +1,17 @@
-<form class="form" action="/" method="POST">
-  <label for="name" class="form-item">
-    Name: 
-    <input type="text" name="name">
-  </label>
-  <label for="plate" class="form-item"> 
-    <input type="text" name="plate">
-  </label>
-  <input type="submit" name="" value="Submit">
-</form>
+<div>
+  <form class="form" action="/" method="post">
+    <div class="input">
+      <label for="name" class="form-item">
+        Name: <input type="text" name="name" value="{{name}}">
+      </label>
+    </div>
+    <div class="input">
+      <label for="plate" class="form-item"> 
+        Plate: <input type="text" name="plate" value="{{plate}}">
+      </label> 
+    </div>
+    <div class="submit">
+      <input type="submit" name="" value="Submit">
+    </div>
+  </form>
+</div>
