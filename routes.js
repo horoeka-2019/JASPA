@@ -35,15 +35,15 @@ homeRouter.post('/', (req, res) => {
 
 // server.get '/list'
 homeRouter.get('/list', (req, res) => {
-  // const template = './pages/list'
+  const template = './pages/list'
 
-  // fs.readFile(path, 'utf8', (err, data) => {
-  //   if (err) console.error(err.message)
+  fs.readFile(path, 'utf8', (err, data) => {
+    if (err) console.error(err.message)
 
-  //   const contents = JSON.parse(data)
-  //   res.render(template, contents)
-  // })
-  res.send('hello')
+    const contents = JSON.parse(data)
+    console.log(contents)
+    res.render(template, contents)
+  })
 })
 
 module.exports = homeRouter
