@@ -1,60 +1,48 @@
 body {
-  background-color: #2C98AE;
+  background-color: #E0E0E2;
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  
+}
+
+h1 {
+  text-align: center;
 }
 
 .container {
   height: 100vh;
   display: grid;
-  grid-template-rows: 60px auto 40px;
-  grid-template-columns: 1fr 2fr 1fr;
-}
-
-.header {
-  grid-column: span 3;
-
+  grid-template-areas:
+  "nav nav nav nav"
+  "side body-text body-text side"
+  "side form form side"
+  "footer footer footer footer";
+  
 }
 
 .page-contents {
-  grid-column: 2 / 3;
+  grid-area: body-text;
+  text-align: justify;
+  border-radius: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 2rem;
+  padding-top: .5rem;
 }
+
 
 .footer {
+  grid-area: footer;
   text-align: center;
-  grid-column: span 3;
-  grid-row: 3 / 4;
+  font-family: 'Courier New', Courier, monospace;
+  color: grey;
+  font-size: .8rem;
+  height: 10%;
 }
 
-h1 {
-  font-family: 'Poppins', sans-serif;
-}
-
-h3 {
-  font-family: 'Poppins', sans-serif;
-}
-
-.contents {
-
-}
-
-.form {
-
-}
-
-.input {
-
-}
-
-.submit {
-
-}
-
-.AT {
-  color: #DC483A;
-}
-.title-eda {
-  font-family: 'Poppins', sans-serif;
-  color: black
+.side {
+  grid-area: side;
+  width: 25%;
 }
 
 .size {
@@ -79,18 +67,19 @@ a:visited {
 }
 
 .navigation {
+  grid-area: nav;
   position: relative;
   overflow: hidden;
   list-style: none;
-  background-color: #dc483a;
-  margin-bottom: 20px;
+  background-color: #FA9F42;
+  
 }
 
 .navigation a {
   color: black;
   float: left;
   text-align: center;
-  padding: 25px 20px;
+  padding: 10px 20px;
   text-decoration: none;
 }
 
@@ -117,5 +106,56 @@ a:visited {
 
 .nav-right a {
   float: right;
-  font-size: 18px;
+  font-size: 3rem;
+}
+
+.at {
+  color: #ca2c39
+}
+
+label{
+  display: table-cell;
+  text-align: right;
+}
+input {
+display: table-cell;
+}
+div.row{
+  display:table-row;
+}
+
+.row {
+  padding: 5px;
+}
+
+form {
+  grid-area: form;
+font-size: 1.2rem;
+}
+
+.input-element{
+  font-size: 1rem; 
+  width: auto;
+}
+
+.app-description {
+  font-size: 1rem;
+}
+
+.instructions {
+  font-size: .9rem;
+}
+
+.date {
+  font-size: 1.1rem;
+}  
+
+.button {
+  font-size: 1rem;
+  background-color: white;
+  margin-top: 1rem;
+}
+
+.button-div {
+  text-align: center;
 }
